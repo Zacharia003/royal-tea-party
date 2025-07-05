@@ -17,65 +17,70 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
+    body {
+      scroll-behavior: smooth;
+      background: #f5f0e6;
+    }
+
+    /* HEADER */
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 4.5rem;
+      font-size: 4rem;
       text-align: center;
-      margin-top: 30px;
+      margin-top: 20px;
       background: linear-gradient(to right, #d4af37, #f9d976, #d4af37);
-      /* gold gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
-    body {
-      scroll-behavior: smooth;
-      background: #f5f0e6;
-      /* soft ivory to cream */
-    }
-
+    /* SECTION */
     .section {
-      height: 120vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
+      flex-direction: column;
     }
 
     .section-1 {
       background: #f5f0e6;
-      flex-direction: column;
-    }
-
-    .section-1 h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #6b3e26;
     }
 
     .section-1 img {
-      max-width: 100%;
-      height: 115vh;
+      width: 100%;
+      max-width: 700px;
+      height: auto;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
     }
 
     .section-2 {
       background: #fff8ec;
-      flex-direction: column;
+    }
+
+    .section-2 img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
     }
 
     .section-2 h2 {
       font-size: 2rem;
       color: #2f4f4f;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .section-2 p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: #444;
+      margin-top: 30px;
       margin-bottom: 30px;
     }
 
@@ -94,6 +99,41 @@
     .donate-btn:hover {
       background-color: #218838;
     }
+
+    /* ✅ MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .section-2 h2 {
+        font-size: 1.5rem;
+      }
+
+      .section-2 p {
+        font-size: 1rem;
+      }
+
+      .donate-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+        margin-top: 10px;
+      }
+
+      .section {
+        padding: 20px 15px;
+      }
+
+      .donate-btn {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -111,6 +151,7 @@
   <section class="section section-2">
     <div>
       <h2>Buy Authentic Indian Tea</h2>
+      <img src="product.jpg" alt="Royal Tea Party Image" />
       <p>50% goes to children’s education in Nepal</p>
       <p>$144 = 3 months of school for 1 child</p>
       <a class="donate-btn" href="https://your-donation-link.com" target="_blank">Donate Now</a>
